@@ -25,5 +25,4 @@ Thumbs.db
 
 # Large ML / data files (if any)
 *.npy
-*.h5
 *.pt
