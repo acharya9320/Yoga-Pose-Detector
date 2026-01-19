@@ -180,10 +180,9 @@ st.markdown(
 # ----------------------------------------------------
 @st.cache_resource
 def load_pose_model():
-    model = load_model("model.h5")
-
-    labels = np.load("labels.npy")
-    labels = [str(x) for x in labels]
+    model_path = os.path.join(os.path.dirname(__file__), "model.h5")
+    model = load_model(model_path, compile=False)
+    labels = [...]
     return model, labels
 
 
